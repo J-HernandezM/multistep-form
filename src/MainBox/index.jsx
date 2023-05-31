@@ -1,6 +1,7 @@
 import React from "react"
+import './MainBox.css'
 
-export function MainBox({children}){
+function MainBox({children}){
     return(
         <main>
             {children}

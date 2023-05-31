@@ -1,0 +1,9 @@
+.sidebarDesk{
+    display: none;
+}
+
+@media (min-width:1000px) {
+    .sidebarDesk{
+        display: block;
+    }
+}

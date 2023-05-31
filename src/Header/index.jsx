@@ -1,5 +1,5 @@
 import React from "react"
-import { preprocessCSS } from "vite"
+import './Header.css'
 
 function Header({children}){
     return(
@@ -9,4 +9,4 @@ function Header({children}){
     )
 }
 
-export {Header}
+export { Header } 

@@ -1,0 +1,51 @@
+form{
+    position: absolute;
+    top: -70rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 355rem;
+
+    padding: 30rem 20rem;
+    background-color: var(--White);
+
+    border-radius:12rem;
+}
+.personalLabels{
+    display: block;
+
+    margin-bottom: 4rem;
+
+    font-size: var(--xs);
+    color: var(--Marine-blue);
+    letter-spacing:-0.8rem;
+}
+.personalInputBox{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    width: 100%;
+    margin-bottom: 12rem;
+}
+.personalInputs {
+  width: 100%;
+  height: 48rem;
+  padding-left: 20rem;
+
+  border-radius: 4rem;
+  border: 1px solid var(--Light-gray);
+  outline: none;
+
+  color: var(--Marine-blue);
+  font-family: Ubuntu;
+  font-weight: 500;
+  font-size: var(--sm);
+
+}
+input::placeholder{
+    font-family: Ubuntu;
+    font-weight: bold;
+    font-size: var(--sm);
+    color: var(--Light-gray);
+}

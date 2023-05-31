@@ -1,15 +1,14 @@
 import React from "react"
+import './SidebarMob.css';
 
 function SidebarMob(){
     return(
-        <div className='sidebarMob'>
-          <div className='stepBoxMob'>
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
+          <div className='sidebarMob'>
+                <li className="steped">1</li>
+                <li className="">2</li>
+                <li className="">3</li>
+                <li className="">4</li>
           </div>
-        </div>
     )
 }
 

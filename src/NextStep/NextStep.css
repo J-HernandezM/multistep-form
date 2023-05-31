@@ -1,0 +1,13 @@
+.next{
+    height: 40rem;
+    width: 80rem;
+
+    color: var(--White);
+    font-family: Ubuntu;
+    font-weight: normal;
+    font-size: var(--xs);
+    
+    background-color: var(--Marine-blue);
+    border-radius: 4rem;
+    border: none;
+}
