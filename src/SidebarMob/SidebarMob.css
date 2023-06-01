@@ -18,6 +18,8 @@ li{
     border-radius: 17rem;
     border: 2px solid var(--Light-gray);
     background-color: transparent;
+
+    transition: all .4s;
 }
 .steped{
     background-color: var(--Light-blue);

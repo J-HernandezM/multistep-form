@@ -1,9 +1,13 @@
 footer{
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-
     padding: 16rem;
 
     background-color: var(--Alabaster);
+}
+.footerClass{
+    justify-content: flex-end;
+}
+.hasGoBack{
+    justify-content: space-between;
 }

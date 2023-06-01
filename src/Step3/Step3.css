@@ -1,0 +1,46 @@
+.pickInputBox{
+    position: relative;
+    width: 100%;
+    min-height: 78rem;
+}
+.pickLabels--textWrap{
+    width: 70%;
+    margin-left: 16rem;
+    min-height: 30rem;
+}
+.pickLabels{
+    display: flex;
+    align-items: center;
+    padding: 0 16rem;
+    min-height: 65rem;
+}
+.pickInputs{
+    display: none;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+.pickInputs:checked + .pickLabels .pickPrice{
+    color: var(--Purplish-blue);
+}
+
+.icons{
+    height: 0;
+    width: 1rem;
+    color: var(--Light-gray);
+    margin-right: 18rem;
+}
+
+.check{
+    height: 0;
+    width: 1rem;
+    color: var(--Purplish-blue);
+}
+
+.pickDescription{
+    text-align: left;
+    font-size: var(--xs);
+}
+.pickTitle, .pickDescription{
+    letter-spacing: -0.5rem;
+}

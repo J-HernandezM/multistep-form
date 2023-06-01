@@ -3,6 +3,25 @@
 .changeBilling{
     display: flex;
     justify-content: center;
+    align-items: center;
+    
+    margin-top: 20rem;
+    height: 48rem;
+
+
+    background-color: var(--Magnolia);
+    border-radius: 12rem;
+}
+
+/* TYPOGRAPHY */
+.billingType{
+    font-weight: 500;
+    color: var(--Cool-gray);
+    transition: all .4s;
+}
+.billingType-checked{
+    font-weight: 500;
+    color: var(--Marine-blue);
 }
 
 /* SWITCH */
@@ -12,6 +31,7 @@
     display: inline-block;
     width: 38px;
     height: 20px;
+    margin: 0 24rem 0 24rem;
 }
 .switch input {
     width: 0;

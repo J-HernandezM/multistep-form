@@ -1,0 +1,44 @@
+.inputTitle{
+    color: var(--Marine-blue);
+    font-weight: bold;
+}
+.labels{
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-height: 78rem;
+    padding-left: 18rem;
+    margin-bottom: 12rem;
+
+    border: 1px var(--Light-gray) solid;
+    border-radius: 12rem;
+
+    transition: all .4s;
+}
+
+.inputs:checked + .labels{
+    border: 1px var(--Purplish-blue) solid;
+    background-color: var(--Magnolia);
+}
+.textWrap{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+
+    width: 40%;
+    min-height: 40rem;
+}
+.planInputs{
+    display: none;
+}
+.svg{
+    height: 40rem;
+    margin-right: 18rem;
+}
+.inputDescription{
+    color: var(--Cool-gray);
+    font-size: var(--xs);
+    font-weight: 500;
+}

@@ -1,13 +1,13 @@
 import React from "react"
 import './SidebarMob.css';
 
-function SidebarMob(){
+function SidebarMob({currentStep}){
     return(
           <div className='sidebarMob'>
-                <li className="steped">1</li>
-                <li className="">2</li>
-                <li className="">3</li>
-                <li className="">4</li>
+                <li className={currentStep===1?'steped':''}>1</li>
+                <li className={currentStep===2?'steped':''}>2</li>
+                <li className={currentStep===3?'steped':''}>3</li>
+                <li className={currentStep===4?'steped':''}>4</li>
           </div>
     )
 }

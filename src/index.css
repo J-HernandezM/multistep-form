@@ -33,6 +33,10 @@
   --Magnolia: hsl(217, 100%, 97%);
   --Alabaster: hsl(231, 100%, 99%);
   --White: hsl(0, 0%, 100%);
+  /* PERSONAL */
+  --Alternate-gray: rgba(248,249,254,255);
+  --Darker-purple:#585195
+  ;
 
   --xxs:12rem;
   --xs:14rem;
