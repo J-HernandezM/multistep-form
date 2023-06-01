@@ -3,11 +3,12 @@ import './Step3.css'
 
 function Step3(){
     const [addons, setAddons] = React.useState([])
+    //Derivated state for check svg logic
     let idsChecked = []
-    console.log(addons);
     addons.forEach((entry)=>{idsChecked.push(entry.id)})
     function selectAddons(event){
         if(event.target.classList.contains('inputs')){
+            //Define the new entry to the state array
             const idAddon=event.target.id
             const rawPrice=event.target.nextElementSibling.lastChild.innerHTML.split('')[2]
             const titleAddon=event.target.nextElementSibling.childNodes[2].firstChild.innerHTML
@@ -16,28 +17,23 @@ function Step3(){
                 id : idAddon,
                 price : rawPrice
             }
-            if(addons.length===0){
+            //Find the index
+            let index
+            addons.find((entry)=>{
+                if(entry.title==newEntry.title){
+                    index = addons.indexOf(entry)
+                }
+            })
+            //Evaluate wether to erase or push using the index or the abscense of it
+            if(!index && index!==0){
                 const newArray = [...addons]
                 newArray.push(newEntry)
                 setAddons(newArray)
-            }else{
-                addons.forEach((entry)=>{
-                    if(entry.title===newEntry.title){
-                        const newArray = [...addons]
-                        const index = newArray.indexOf(newEntry)
-                        newArray.splice(index, 1)
-                        console.log('erased');
-                        setAddons(newArray)
-                    }else{
-                        if(addons.length<=3){
-                            const newArray = [...addons]
-                            newArray.push(newEntry)
-                            console.log('pushed');
-                            setAddons(newArray)
-                        }
-                    }
-                })  
-            }     
+            }else if(index || index===0){
+                const newArray = [...addons]
+                newArray.splice(index, 1)
+                setAddons(newArray)
+            }   
         }
     }
 
@@ -50,8 +46,8 @@ function Step3(){
                     <div className='pickInputBox'>
                         <input type="checkbox" id='online' name='online' className='inputs pickInputs'/>
                         <label className="pickLabels labels" htmlFor="online">
-                            <span className={`fa-regular fa-square fa-xl ${!idsChecked.includes('online')?'icons':'inactive'}`}></span>
-                            <span className={`fa-solid fa-square-check fa-xl  ${idsChecked.includes('online')?'check':'inactive'}`}></span>
+                            <span className={`fa-regular fa-square fa-xl ${!idsChecked.includes('online')?'icons':'inactive'} `}></span>
+                            <span className={`fa-solid fa-square-check fa-xl ${idsChecked.includes('online')?'check':'inactive'}`}></span>
                             <div className="textWrap pickLabels--textWrap">
                                 <p className="pickTitle inputTitle">Online service</p>
                                 <p className="pickDescription inputDescription">Access to multiplayer games</p>
@@ -63,8 +59,8 @@ function Step3(){
                     <div className='pickInputBox'>
                         <input type="checkbox" id='storage' name='storage' className='inputs pickInputs'/>
                         <label className="pickLabels labels" htmlFor="storage">
-                            <span className={`fa-regular fa-square fa-xl ${!idsChecked.includes('storage')?'icons':'inactive'}`}></span>
-                            <span className={`fa-solid fa-square-check fa-xl  ${idsChecked.includes('storage')?'check':'inactive'}`}></span>
+                            <span className={`fa-regular fa-square fa-xl ${!idsChecked.includes('storage')?'icons':'inactive'} `}></span>
+                            <span className={`fa-solid fa-square-check fa-xl ${idsChecked.includes('storage')?'check':'inactive'}`}></span>
                             <div className="textWrap pickLabels--textWrap">
                                 <p className="pickTitle inputTitle">Larger storage</p>
                                 <p className="pickDescription inputDescription">Extra 1TB of cloud save</p>
@@ -77,8 +73,8 @@ function Step3(){
                     <div className='pickInputBox'>
                         <input type="checkbox" id='profile' name='profile' className='inputs pickInputs'/>
                         <label className="pickLabels labels" htmlFor="profile">
-                            <span className={`fa-regular fa-square fa-xl ${!idsChecked.includes('profile')?'icons':'inactive'}`}></span>
-                            <span className={`fa-solid fa-square-check fa-xl  ${idsChecked.includes('profile')?'check':'inactive'}`}></span>
+                            <span className={`fa-regular fa-square fa-xl ${!idsChecked.includes('profile')?'icons':'inactive'} `}></span>
+                            <span className={`fa-solid fa-square-check fa-xl ${idsChecked.includes('profile')?'check':'inactive'}`}></span>
                             <div className="textWrap pickLabels--textWrap">
                                 <p className="pickTitle inputTitle">Customizable profile</p>
                                 <p className="pickDescription inputDescription">Custom theme on your profile</p>
