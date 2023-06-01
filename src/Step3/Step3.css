@@ -25,15 +25,16 @@
 }
 
 .icons{
+    color: var(--Light-gray);
+}
+
+.icons, .check{
     height: 0;
     width: 1rem;
-    color: var(--Light-gray);
     margin-right: 18rem;
 }
 
 .check{
-    height: 0;
-    width: 1rem;
     color: var(--Purplish-blue);
 }
 
