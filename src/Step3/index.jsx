@@ -1,8 +1,8 @@
 import React from "react"
 import './Step3.css'
 
-function Step3(){
-    const [addons, setAddons] = React.useState([])
+function Step3({addons, setAddons}){
+    
     //Derivated state for check svg logic
     let idsChecked = []
     addons.forEach((entry)=>{idsChecked.push(entry.id)})

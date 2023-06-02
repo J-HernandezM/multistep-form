@@ -38,6 +38,10 @@ const stepInformation = {
 function App() {
   const [currentStep, setCurrentStep] = React.useState(1)
   const [yearly, setYearly] = React.useState(false)
+  const [addons, setAddons] = React.useState([])
+  const [plan, setPlan] = React.useState()
+
+
   return (
     <>
       <Header>
@@ -49,9 +53,18 @@ function App() {
         {currentStep===2 && <Step2 
           yearly={yearly}
           setYearly={setYearly}
+          setPlan={setPlan}
+          plan={plan}
         />}
-        {currentStep===3 && <Step3 />}
-        {currentStep===4 && <Step4 />}
+        {currentStep===3 && <Step3 
+          addons={addons}
+          setAddons={setAddons}
+        />}
+        {currentStep===4 && <Step4 
+          yearly={yearly}
+          plan={plan}
+          addons={addons}
+        />}
       </MainBox>
       <FooterBox currentStep={currentStep}>
         {currentStep>1 && <BackStep 

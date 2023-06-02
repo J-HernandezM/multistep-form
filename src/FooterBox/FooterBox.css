@@ -2,8 +2,10 @@ footer{
     display: flex;
     align-items: center;
     padding: 16rem;
+    width: 100%;
 
     background-color: var(--Alabaster);
+    border: none;
 }
 .footerClass{
     justify-content: flex-end;
