@@ -1,6 +1,14 @@
 import React from "react";
 import './ChangeBilling.css'
 function ChangeBilling({yearly, setYearly, plan, setPlan}){
+
+    const sliderRef = React.useRef(null)
+    React.useEffect(()=>{
+        if(yearly){
+            sliderRef.current.checked=true
+        }
+    },[])
+
     function printingFunction(event) {
         if(event.target.tagName==='SPAN'){
             !yearly?setYearly(true):setYearly(false)
@@ -37,7 +45,7 @@ function ChangeBilling({yearly, setYearly, plan, setPlan}){
                 printingFunction(evento)
                 updatePlanIfYearlyChanges(evento)
                 }}>
-                <input type="checkbox" />
+                <input ref={sliderRef} type="checkbox"/>
                 <span className="slider round"></span>
             </label>
             <p className={`${yearly?'billingType-checked':'billingType'}`}>Yearly</p>
