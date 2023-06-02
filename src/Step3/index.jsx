@@ -2,7 +2,29 @@ import React from "react"
 import './Step3.css'
 
 function Step3({addons, setAddons}){
-    
+    //check persistance
+    const refOnline = React.useRef(null)
+    const refStorage = React.useRef(null)
+    const refProfile = React.useRef(null)
+
+    const addonRefs = [refOnline, refStorage, refProfile]
+    React.useEffect(checkPreviousSelections,[])
+    function checkPreviousSelections(){
+        if(addons.length>0){
+            let checkThis=[]
+            addons.forEach((added)=>{
+                addonRefs.forEach((reference)=>{
+                    if(added.id===reference.current.id){
+                        checkThis.push(reference)
+                    }
+                })
+            })
+            checkThis.forEach((checkedReference)=>{
+                checkedReference.current.checked=true
+            })
+        }
+    }
+
     //Derivated state for check svg logic
     let idsChecked = []
     addons.forEach((entry)=>{idsChecked.push(entry.id)})
@@ -44,7 +66,7 @@ function Step3({addons, setAddons}){
                 <div className='inputBox'>
 
                     <div className='pickInputBox'>
-                        <input type="checkbox" id='online' name='online' className='inputs pickInputs'/>
+                        <input ref={refOnline} type="checkbox" id='online' name='online' className='inputs pickInputs'/>
                         <label className="pickLabels labels" htmlFor="online">
                             <span className={`fa-regular fa-square fa-xl ${!idsChecked.includes('online')?'icons':'inactive'} `}></span>
                             <span className={`fa-solid fa-square-check fa-xl ${idsChecked.includes('online')?'check':'inactive'}`}></span>
@@ -57,7 +79,7 @@ function Step3({addons, setAddons}){
                     </div>
 
                     <div className='pickInputBox'>
-                        <input type="checkbox" id='storage' name='storage' className='inputs pickInputs'/>
+                        <input ref={refStorage} type="checkbox" id='storage' name='storage' className='inputs pickInputs'/>
                         <label className="pickLabels labels" htmlFor="storage">
                             <span className={`fa-regular fa-square fa-xl ${!idsChecked.includes('storage')?'icons':'inactive'} `}></span>
                             <span className={`fa-solid fa-square-check fa-xl ${idsChecked.includes('storage')?'check':'inactive'}`}></span>
@@ -71,7 +93,7 @@ function Step3({addons, setAddons}){
                     </div>
 
                     <div className='pickInputBox'>
-                        <input type="checkbox" id='profile' name='profile' className='inputs pickInputs'/>
+                        <input ref={refProfile} type="checkbox" id='profile' name='profile' className='inputs pickInputs'/>
                         <label className="pickLabels labels" htmlFor="profile">
                             <span className={`fa-regular fa-square fa-xl ${!idsChecked.includes('profile')?'icons':'inactive'} `}></span>
                             <span className={`fa-solid fa-square-check fa-xl ${idsChecked.includes('profile')?'check':'inactive'}`}></span>

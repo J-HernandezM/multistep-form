@@ -10,11 +10,11 @@ function Step2({yearly, setYearly, setPlan, plan}){
     let refArcade = React.useRef(null)
     let refAdvanced = React.useRef(null)
     let refPro = React.useRef(null)
-    const allRefs = [refArcade, refAdvanced, refPro]
+    const planRef = [refArcade, refAdvanced, refPro]
     React.useEffect(checkPreviousSelections, [])
     function checkPreviousSelections(){
         if(plan){
-            const found = allRefs.find(referencia=>{
+            const found = planRef.find(referencia=>{
                 if(plan.id===referencia.current.id){
                     return referencia
                 }

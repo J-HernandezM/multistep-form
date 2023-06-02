@@ -75,3 +75,8 @@
     color: var(--Marine-blue);
     font-weight: normal;
 }
+.noaddons{
+    border: none;
+    margin: 0;
+    padding: 0;
+}

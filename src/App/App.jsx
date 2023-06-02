@@ -40,6 +40,7 @@ function App() {
   const [yearly, setYearly] = React.useState(false)
   const [addons, setAddons] = React.useState([])
   const [plan, setPlan] = React.useState()
+  const [user, setUser] = React.useState()
 
 
   return (
@@ -49,7 +50,10 @@ function App() {
         <SidebarMob currentStep={currentStep}/>
       </Header>
       <MainBox>
-        {currentStep===1 && <Step1 />}
+        {currentStep===1 && <Step1 
+          user={user}
+          setUser={setUser}
+        />}
         {currentStep===2 && <Step2 
           yearly={yearly}
           setYearly={setYearly}
@@ -64,6 +68,7 @@ function App() {
           yearly={yearly}
           plan={plan}
           addons={addons}
+          setCurrentStep={setCurrentStep}
         />}
       </MainBox>
       <FooterBox currentStep={currentStep}>
@@ -74,6 +79,7 @@ function App() {
         <NextStep 
           currentStep={currentStep}
           setCurrentStep={setCurrentStep}
+          plan={plan}
         />
       </FooterBox>
     </>
