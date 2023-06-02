@@ -5,10 +5,15 @@ import { AddonStructure } from "./AddonStructure"
 function Step4({plan, addons, yearly}){
   let totaladdonsPrice = 0
   addons.map((addon)=>{
-    totaladdonsPrice += addon.price
+    totaladdonsPrice += Number(addon.price)
   })
   let rawPrice = Number(plan?.price.substring(1).split('/')[0])
-  let totalPrice = rawPrice + totaladdonsPrice
+  let totalPrice
+  if(!yearly){
+    totalPrice = rawPrice + totaladdonsPrice
+  }else{
+    totalPrice = rawPrice + (totaladdonsPrice*10)
+  }
   
     return(
     <form className='finishing'>
