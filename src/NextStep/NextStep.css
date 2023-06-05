@@ -1,0 +1,29 @@
+.next{
+    height: 40rem;
+    width: 80rem;
+
+    color: var(--White);
+    font-family: Ubuntu;
+    font-weight: normal;
+    font-size: var(--xs);
+    
+    background-color: var(--Marine-blue);
+    border-radius: 4rem;
+    border: none;
+
+    transform: scale(1);
+    transition: transform .4s;
+}
+.next:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.confirm{
+    background-color: var(--Purplish-blue);
+    
+}
+@media (min-width:1000px) {
+    .onlyNext{
+        width: 100rem;
+    }
+}

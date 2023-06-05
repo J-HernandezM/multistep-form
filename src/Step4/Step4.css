@@ -1,0 +1,82 @@
+.finalBilling{
+    padding: 18rem;
+
+    background-color: var(--Magnolia);
+    border-radius: 12rem;
+
+    font-size: var(--mids);
+}
+.finalBilling--plan{
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: 11rem;
+    margin-bottom: 15rem;
+
+    border-bottom: 0.5rem solid var(--Light-gray2);
+}
+.finalBilling--addon{
+    display: flex;
+    flex-direction: column;
+}
+.selectedAddon{
+    display: flex;
+    justify-content: space-between;   
+
+    margin-bottom: 16rem;
+    width: 100%;
+
+    font-weight: normal;
+    color: var(--Cool-gray);
+}
+.selectedAddon:last-child{
+    margin: 0;
+}
+.finalBilling--plan--left{
+    display: flex;
+    flex-direction:column ;
+    align-items: start;
+}
+.finalBilling--plan--right{
+    display: flex;
+    align-items: center;
+    color: var(--Marine-blue);
+    font-weight: bold;
+}
+.plan--title, .title--bill{
+    color: var(--Marine-blue);
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+.plan--change{
+    color: var(--Cool-gray);
+    font-size: 14.7rem;
+    text-decoration: underline var(--Cool-gray) 2rem;
+}
+.plan--change:hover{
+    cursor: pointer;
+}
+.totalPrice{
+    display: flex;
+    justify-content: space-between;
+
+    font-size: var(--mids);
+    color: var(--Cool-gray);
+    padding: 18rem;
+}
+.totalPrice--final{
+    color: var(--Purplish-blue);
+    font-weight: bold;
+    font-size: var(--md);
+}
+.finalBilling--addon--right{
+    display: flex;
+    align-items: center;
+    color: var(--Marine-blue);
+    font-weight: normal;
+}
+.noaddons{
+    border: none;
+    margin: 0;
+    padding: 0;
+}

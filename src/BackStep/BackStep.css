@@ -1,0 +1,8 @@
+.back{
+    color: var(--Cool-gray);
+    background-color: transparent;
+    font-weight: 500;
+}
+.back:hover{
+    color: var(--Marine-blue);
+}
