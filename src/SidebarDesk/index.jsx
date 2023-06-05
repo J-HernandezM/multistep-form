@@ -26,7 +26,7 @@ function SidebarDesk({currentStep}){
                     </div>
                 </div>
                 <div className="steps">
-                    <li className={currentStep===4||5?'steped':''}>4</li>
+                    <li className={`${currentStep===5?'steped':''} ${currentStep===4?'steped':''}`}>4</li>
                     <div className='stepBox-info'>
                     <p className="stepTitle">STEP 4</p>
                     <p className="stepDescription">SUMMARY</p>

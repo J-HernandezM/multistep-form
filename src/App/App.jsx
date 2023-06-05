@@ -42,6 +42,7 @@ function App() {
   const [addons, setAddons] = React.useState([])
   const [plan, setPlan] = React.useState()
   const [user, setUser] = React.useState()
+  console.log(currentStep);
   return (
     <>
       <Header>
