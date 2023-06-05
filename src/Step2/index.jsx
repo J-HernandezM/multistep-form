@@ -39,7 +39,7 @@ function Step2({yearly, setYearly, setPlan, plan}){
             <form className='plan' onClick={selectPlan}>
                 <h1 className='title'>Select your plan</h1>
                 <h2 className='subtitle'>You have the option of monthly or yearly billing.</h2>
-                <div className='inputBox'>
+                <div className='inputBox planInputBox'>
                     <input ref={refArcade} type="radio" id='arcade' name='billingPlan' required className='inputs planInputs'/>
                     <label className='labels planLabels' htmlFor="arcade">
                         <img className="svg planIcons" src={ArcadeSVG} alt="arcade plan" />

@@ -11,6 +11,7 @@ import { Step1 } from '../Step1'
 import { Step2 } from '../Step2'
 import { Step3 } from '../Step3'
 import { Step4 } from '../Step4'
+import { Step5 } from '../Step5'
 
 const stepInformation = {
   step1:{
@@ -44,7 +45,7 @@ function App() {
   return (
     <>
       <Header>
-        <SidebarDesk />
+        <SidebarDesk currentStep={currentStep}/>
         <SidebarMob currentStep={currentStep}/>
       </Header>
       <MainBox>
@@ -68,8 +69,9 @@ function App() {
           addons={addons}
           setCurrentStep={setCurrentStep}
         />}
+        {currentStep===5 && <Step5/>}
       </MainBox>
-      <FooterBox currentStep={currentStep}>
+      {currentStep<5 && <FooterBox currentStep={currentStep}>
         {currentStep>1 && <BackStep 
           currentStep={currentStep}
           setCurrentStep={setCurrentStep}
@@ -80,7 +82,8 @@ function App() {
           plan={plan}
           user={user}
         />
-      </FooterBox>
+      </FooterBox>}
+      
     </>
   )
 }

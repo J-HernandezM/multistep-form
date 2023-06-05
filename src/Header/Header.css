@@ -11,5 +11,6 @@ header{
 @media (min-width:1000px) {
     header{
         background-image: url('../assets/images/bg-sidebar-desktop.svg');
+        background-size: contain;
     }
 }

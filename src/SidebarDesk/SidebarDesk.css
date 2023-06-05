@@ -4,6 +4,30 @@
 
 @media (min-width:1000px) {
     .sidebarDesk{
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .stepTitle{
+        color: var(--Cool-gray);
+        font-weight: bold;
+        font-size: var(--xs);
+    }
+    .stepDescription{
+        color: var(--Magnolia);
+        font-weight: bold;
+        font-size: var(--xs);
+    }
+    .stepBox-info{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 20rem;
+    }
+    .steps{
+        display: flex;
+        width: 80%;
+        margin-bottom: 30rem;
     }
 }

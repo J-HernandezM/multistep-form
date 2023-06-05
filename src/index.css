@@ -97,3 +97,35 @@ body {
 
   text-align: start;
 }
+@media (min-width:1000px) {
+  #root{
+    grid-template-columns: 274rem auto ;
+    grid-template-rows: 90% 10%;
+
+    width: 950rem;
+    height: 608rem;
+    padding:20rem;
+
+    background-color: var(--White);
+    border-radius: 12rem;
+  }
+  header{
+    grid-area: 1/1/3/2;
+    padding: 50rem 0 0 0;
+  }
+  main{
+    display: grid;
+    place-items: start center;
+
+    grid-area: 1/2/2/3;
+
+    padding-top: 10rem;
+    
+    background-color: var(--White);
+  }
+  footer{
+    grid-area: 2/2/3/3;
+    padding: 0 80rem 0 75rem;
+    background-color: var(--White);
+  }
+}

@@ -67,3 +67,11 @@ input::placeholder{
     font-weight: bold;
     color: var(--Strawberry-red);
 }
+@media (min-width:1000px) {
+    form{
+        position: static;
+        transform: translateX(0);
+        width: 480rem;
+        padding: 30rem 0;
+    }
+}

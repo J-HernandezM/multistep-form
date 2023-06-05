@@ -67,3 +67,26 @@
     color: var(--Marine-blue);
     font-weight: 500;
 }
+@media (min-width:1000px) {
+    .planLabels{
+        flex-direction: column;
+        justify-content: flex-start;
+        min-height: 170rem;
+        width: 150rem;
+        padding-bottom: 10rem;
+    }
+    .planLabels--textWrap{
+        width: 100%;
+    }
+    .planInputBox{
+        display: flex;
+        justify-content: space-between;
+    }
+    .planIcons{
+        margin-bottom: 60rem;
+    }
+    .wrapExpanded{
+        padding-bottom: 0;
+        justify-content: flex-end;
+    }
+}

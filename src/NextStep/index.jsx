@@ -6,7 +6,7 @@ function NextStep({currentStep, setCurrentStep, plan, user}){
     let regexB = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/
     let regexC = /^\+?\d{1,3}[-.\s]?\(?\d{1,3}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/
     return(
-        <button className="next" onClick={()=>{
+        <button className={`next onlyNext ${currentStep===4?'confirm':''}`} onClick={()=>{
             if(currentStep===1){
                 if(user){
                     if(!user.name || !user.email || !user.number){
@@ -32,12 +32,12 @@ function NextStep({currentStep, setCurrentStep, plan, user}){
                     setCurrentStep(newStep)
                 }
             }
-            if(currentStep<4 && currentStep>=1 && currentStep!==2 && currentStep!==1){
+            if(currentStep<=4 && currentStep>=1 && currentStep!==2 && currentStep!==1){
                 let newStep = currentStep+1
                 setCurrentStep(newStep)
             }
             
-          }}>Next Step</button>
+          }}>{!currentStep===4?'Next Step':'Confirm'}</button>
     )
 }
 export { NextStep }

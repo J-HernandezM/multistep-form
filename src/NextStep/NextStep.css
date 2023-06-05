@@ -18,3 +18,12 @@
     transform: scale(1.05);
     cursor: pointer;
 }
+.confirm{
+    background-color: var(--Purplish-blue);
+    
+}
+@media (min-width:1000px) {
+    .onlyNext{
+        width: 100rem;
+    }
+}
