@@ -41,8 +41,6 @@ function App() {
   const [addons, setAddons] = React.useState([])
   const [plan, setPlan] = React.useState()
   const [user, setUser] = React.useState()
-
-
   return (
     <>
       <Header>
@@ -80,6 +78,7 @@ function App() {
           currentStep={currentStep}
           setCurrentStep={setCurrentStep}
           plan={plan}
+          user={user}
         />
       </FooterBox>
     </>

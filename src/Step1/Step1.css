@@ -11,7 +11,7 @@ form{
 
     border-radius:12rem;
 }
-.personalLabels{
+.personalLabels, .errorMessage{
     display: block;
 
     margin-bottom: 4rem;
@@ -43,9 +43,27 @@ form{
   font-size: var(--sm);
 
 }
+.personalInputs:focus{
+    border: 1px solid var(--Purplish-blue);
+}
+.invalid{
+    border: 1px solid var(--Strawberry-red);
+}
+.personalInputs:hover{
+    cursor: pointer;
+}
 input::placeholder{
     font-family: Ubuntu;
     font-weight: bold;
     font-size: var(--sm);
     color: var(--Light-gray);
+}
+.labelBox{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.errorMessage{
+    font-weight: bold;
+    color: var(--Strawberry-red);
 }
