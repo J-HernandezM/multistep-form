@@ -3,26 +3,26 @@
     font-weight: bold;
 }
 .planLabels--title{
-    font-size: 17rem;
+    font-size: 17px;
 }
 .labels{
     display: flex;
     align-items: center;
     
     width: 100%;
-    min-height: 78rem;
-    padding-left: 18rem;
-    margin-bottom: 12rem;
+    min-height: 78px;
+    padding-left: 18px;
+    margin-bottom: 12px;
     
     border: 1px var(--Light-gray) solid;
-    border-radius: 12rem;
+    border-radius: 12px;
     
     transition: all .4s;
     transform: scale(1);
 }
 .planLabels{
     align-items: flex-start;
-    padding: 20rem 0 0 18rem;
+    padding: 20px 0 0 18px;
 }
 .labels:hover{
     transform: scale(1.05);
@@ -34,7 +34,7 @@
     background-color: var(--Magnolia);
 }
 .planPrice{
-    margin-top: 6rem;
+    margin-top: 6px;
 }
 .textWrap{
     display: flex;
@@ -42,19 +42,19 @@
     flex-direction: column;
 
     width: 40%;
-    min-height: 40rem;
+    min-height: 40px;
 }
 .wrapExpanded{
     justify-content: start;
-    height: 80rem;
-    padding-bottom: 20rem;
+    height: 80px;
+    padding-bottom: 20px;
 }
 .planInputs{
     display: none;
 }
 .svg{
-    height: 40rem;
-    margin-right: 18rem;
+    height: 40px;
+    margin-right: 18px;
 }
 .inputDescription{
     color: var(--Cool-gray);
@@ -62,8 +62,8 @@
     font-weight: 500;
 }
 .monthsfree{
-    font-size: 13.5rem;
-    margin-top: 6rem;
+    font-size: 13.5px;
+    margin-top: 6px;
     color: var(--Marine-blue);
     font-weight: 500;
 }
@@ -71,9 +71,9 @@
     .planLabels{
         flex-direction: column;
         justify-content: flex-start;
-        min-height: 170rem;
-        width: 150rem;
-        padding-bottom: 10rem;
+        min-height: 170px;
+        width: 150px;
+        padding-bottom: 10px;
     }
     .planLabels--textWrap{
         width: 100%;
@@ -83,7 +83,7 @@
         justify-content: space-between;
     }
     .planIcons{
-        margin-bottom: 60rem;
+        margin-bottom: 60px;
     }
     .wrapExpanded{
         padding-bottom: 0;

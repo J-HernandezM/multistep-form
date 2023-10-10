@@ -2,20 +2,20 @@
     display: flex;
     justify-content: space-around;
 
-    width: 200rem;
+    width: 200px;
 }
 li{
-    width: 34rem;
-    height: 34rem;
+    width: 34px;
+    height: 34px;
     
 
-    line-height: 31rem;
+    line-height: 31px;
     text-align: center;
     list-style: none;
     color: var(--Light-gray);
     font-weight: 500;
     
-    border-radius: 17rem;
+    border-radius: 17px;
     border: 2px solid var(--Light-gray);
     background-color: transparent;
 

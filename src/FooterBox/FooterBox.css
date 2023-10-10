@@ -1,7 +1,7 @@
 footer{
     display: flex;
     align-items: center;
-    padding: 16rem;
+    padding: 16px;
     width: 100%;
 
     background-color: var(--Alabaster);

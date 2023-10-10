@@ -2,6 +2,6 @@ main{
     position: relative;
 
 
-    min-height: 512rem;
+    min-height: 512px;
     background-color: var(--Light-gray);
 }

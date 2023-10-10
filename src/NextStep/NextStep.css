@@ -1,6 +1,6 @@
 .next{
-    height: 40rem;
-    width: 80rem;
+    height: 40px;
+    width: 80px;
 
     color: var(--White);
     font-family: Ubuntu;
@@ -8,7 +8,7 @@
     font-size: var(--xs);
     
     background-color: var(--Marine-blue);
-    border-radius: 4rem;
+    border-radius: 4px;
     border: none;
 
     transform: scale(1);
@@ -24,6 +24,6 @@
 }
 @media (min-width:1000px) {
     .onlyNext{
-        width: 100rem;
+        width: 100px;
     }
 }

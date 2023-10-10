@@ -2,7 +2,7 @@ header{
     display: grid;
     place-items: start center;
     
-    padding: 40rem;
+    padding: 40px;
 
     background-image: url('../assets/images/bg-sidebar-mobile.svg');
     background-repeat: no-repeat; /* Do not repeat the image */

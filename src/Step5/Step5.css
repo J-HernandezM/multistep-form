@@ -1,16 +1,16 @@
 .thanks{
     display: grid;
     place-items: center;
-    padding: 80rem 20rem 80rem;
+    padding: 80px 20px 80px;
 }
 .thanksSubtitle{
     margin: 0;
     text-align: center;
-    font-size: 17rem;
+    font-size: 17px;
 }
 .thanksIcons{
-    height: 55rem;
-    margin-bottom: 20rem;
+    height: 55px;
+    margin-bottom: 20px;
     margin-right: 0;
 }
 @media (min-width:1000px) {
